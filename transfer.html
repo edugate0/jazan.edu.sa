@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلب تحويل - البوابة الأكاديمية</title>
+    
+    <!-- Bootstrap RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Tajawal for Arabic -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container">
+            <nav class="main-nav">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="شعار جامعة جازان">
+                    </a>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="home.html">الرئيسية</a></li>
+                    <li><a href="dashboard.html">لوحة التحكم</a></li>
+                    <li><a href="profile.html">الملف الشخصي</a></li>
+                    <li><a href="courses.html">السجل الأكاديمي</a></li>
+                    <li><a href="transfer.html" class="active">طلب تحويل</a></li>
+                    <li><a href="gpa.html">حاسبة المعدل</a></li>
+                    <li><a href="index.html">تسجيل الخروج</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card mb-4">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="mb-0"><i class="fas fa-exchange-alt me-2"></i> طلب تحويل تخصص</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="alert alert-info">
+                                <h5>معلومات هامة:</h5>
+                                <ul>
+                                    <li>يجب أن يكون المعدل التراكمي لا يقل عن 3.75 للتحويل إلى الكليات الصحية</li>
+                                    <li>يجب أن يكون المعدل التراكمي لا يقل عن 3.00 للتحويل إلى كلية الهندسة</li>
+                                    <li>يمكن طلب التحويل مرة واحدة فقط خلال الفصل الدراسي</li>
+                                    <li>فترة تقديم طلبات التحويل خلال الأسبوع الأول من كل فصل دراسي</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="profile-detail mb-3">
+                                        <label class="form-label">الاسم الكامل</label>
+                                        <input type="text" class="form-control" value="ريفان سلمان علي صلوي" disabled>
+                                    </div>
+                                    <div class="profile-detail mb-3">
+                                        <label class="form-label">رقم الهوية الوطنية</label>
+                                        <input type="text" class="form-control" value="1132070754" disabled>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="profile-detail mb-3">
+                                        <label class="form-label">الكلية الحالية</label>
+                                        <input type="text" class="form-control" value="كلية العلوم الصحية" disabled>
+                                    </div>
+                                    <div class="profile-detail mb-3">
+                                        <label class="form-label">التخصص الحالي</label>
+                                        <input type="text" class="form-control" value="تمريض" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <form id="transferRequestForm" action="#" method="post">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label for="college" class="form-label">الكلية المرغوبة</label>
+                                            <select class="form-control" id="college" name="college" required>
+                                                <option value="">اختر الكلية</option>
+                                                <option value="1">كلية العلوم</option>
+                                                <option value="2" selected>كلية العلوم الصحية</option>
+                                                <option value="3">كلية الهندسة</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label for="desired_major" class="form-label">التخصص المرغوب</label>
+                                            <select class="form-control" id="desired_major" name="desired_major" required>
+                                                <option value="">اختر التخصص</option>
+                                                <option value="تمريض حرج" selected>تمريض حرج</option>
+                                                <option value="تمريض طوارئ">تمريض طوارئ</option>
+                                                <option value="تمريض أطفال">تمريض أطفال</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group mb-4">
+                                    <label for="reason" class="form-label">سبب طلب التحويل</label>
+                                    <textarea class="form-control" id="reason" name="reason" rows="4" placeholder="اشرح سبب رغبتك في التحويل...">أرغب في تغيير مساري الدراسي لمواءمة اهتماماتي المهنية</textarea>
+                                </div>
+                                
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" id="agree" name="agree" checked required>
+                                    <label class="form-check-label" for="agree">
+                                        أقر بصحة البيانات المدخلة وأتعهد بالالتزام باللوائح والأنظمة الخاصة بالتحويل
+                                    </label>
+                                </div>
+                                
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg">تقديم طلب التحويل</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- Transfer History -->
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="mb-0"><i class="fas fa-history me-2"></i> سجل طلبات التحويل</h3>
+                        </div>
+                        <div class="card-body">
+                            <div id="transferHistory" data-has-history="true">
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>التاريخ</th>
+                                                <th>التخصص المطلوب</th>
+                                                <th>الحالة</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr id="transfer-1">
+                                                <td>2023-10-15</td>
+                                                <td>تمريض حرج ، تمريض طوارئ</td>
+                                                <td>
+                                                    <span class="transfer-status status-approved">تمت الموافقة</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>البوابة الأكاديمية</h3>
+                    <p>بوابة النظام الأكاديمي الخاص بجامعة جازان توفر خدمات إلكترونية لطلاب الجامعة.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">الصفحة الرئيسية للجامعة</a></li>
+                        <li><a href="#">عمادة القبول والتسجيل</a></li>
+                        <li><a href="#">عمادة شؤون الطلاب</a></li>
+                        <li><a href="#">التقويم الأكاديمي</a></li>
+                        <li><a href="#">الخدمات الإلكترونية</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>تواصل معنا</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> جازان، المملكة العربية السعودية</p>
+                    <p><i class="fas fa-phone"></i> +966 17 3292222</p>
+                    <p><i class="fas fa-envelope"></i> info@jazanu.edu.sa</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 جميع الحقوق محفوظة لجامعة جازان</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/transfer.js"></script>
+</body>
+</html>

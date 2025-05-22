@@ -1,0 +1,128 @@
+{
+  "user": {
+    "national_id": "1132070754",
+    "full_name": "ريفان سلمان علي صلوي",
+    "gender": "أنثى",
+    "phone": "0557973887",
+    "email": "refansalman2005@gmail.com",
+    "current_college": "كلية العلوم",
+    "current_major": "كيمياء",
+    "desired_major": "مسار صحي ، هندسة"
+  },
+  "academic_records": [
+    {
+      "semester": "الفصل الأول",
+      "academic_year": "2022-2023",
+      "gpa": 4.5,
+      "courses": [
+        {
+          "course_code": "CHEM101",
+          "course_name": "كيمياء عامة",
+          "credit_hours": 3,
+          "grade": "A",
+          "grade_points": 4.75
+        },
+        {
+          "course_code": "PHYS101",
+          "course_name": "فيزياء عامة",
+          "credit_hours": 3,
+          "grade": "B+",
+          "grade_points": 4.5
+        },
+        {
+          "course_code": "MATH101",
+          "course_name": "رياضيات عامة",
+          "credit_hours": 3,
+          "grade": "A+",
+          "grade_points": 5.0
+        },
+        {
+          "course_code": "ARAB101",
+          "course_name": "لغة عربية",
+          "credit_hours": 2,
+          "grade": "A",
+          "grade_points": 4.75
+        },
+        {
+          "course_code": "ENGL101",
+          "course_name": "لغة إنجليزية",
+          "credit_hours": 2,
+          "grade": "B",
+          "grade_points": 4.0
+        }
+      ]
+    },
+    {
+      "semester": "الفصل الثاني",
+      "academic_year": "2022-2023",
+      "gpa": 4.75,
+      "courses": [
+        {
+          "course_code": "CHEM201",
+          "course_name": "كيمياء عضوية",
+          "credit_hours": 3,
+          "grade": "A+",
+          "grade_points": 5.0
+        },
+        {
+          "course_code": "CHEM202",
+          "course_name": "كيمياء تحليلية",
+          "credit_hours": 3,
+          "grade": "A",
+          "grade_points": 4.75
+        },
+        {
+          "course_code": "CHEM203",
+          "course_name": "مختبر كيمياء",
+          "credit_hours": 2,
+          "grade": "A+",
+          "grade_points": 5.0
+        },
+        {
+          "course_code": "STAT101",
+          "course_name": "إحصاء",
+          "credit_hours": 3,
+          "grade": "A",
+          "grade_points": 4.75
+        },
+        {
+          "course_code": "COMP101",
+          "course_name": "مقدمة في الحاسب",
+          "credit_hours": 2,
+          "grade": "A",
+          "grade_points": 4.75
+        }
+      ]
+    }
+  ],
+  "colleges": [
+    {
+      "id": 1,
+      "name": "كلية العلوم",
+      "majors": [
+        {"id": 1, "name": "كيمياء"},
+        {"id": 2, "name": "فيزياء"},
+        {"id": 3, "name": "رياضيات"},
+        {"id": 4, "name": "أحياء"}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "كلية العلوم الصحية",
+      "majors": [
+        {"id": 5, "name": "طب"},
+        {"id": 6, "name": "صيدلة"},
+        {"id": 7, "name": "تمريض"}
+      ]
+    },
+    {
+      "id": 3,
+      "name": "كلية الهندسة",
+      "majors": [
+        {"id": 8, "name": "هندسة مدنية"},
+        {"id": 9, "name": "هندسة كهربائية"},
+        {"id": 10, "name": "هندسة حاسب"}
+      ]
+    }
+  ]
+}

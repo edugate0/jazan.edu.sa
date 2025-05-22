@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملف الشخصي - البوابة الأكاديمية</title>
+    
+    <!-- Bootstrap RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Tajawal for Arabic -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container">
+            <nav class="main-nav">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="شعار جامعة جازان">
+                    </a>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="home.html">الرئيسية</a></li>
+                    <li><a href="dashboard.html">لوحة التحكم</a></li>
+                    <li><a href="profile.html" class="active">الملف الشخصي</a></li>
+                    <li><a href="courses.html">السجل الأكاديمي</a></li>
+                    <li><a href="transfer.html">طلب تحويل</a></li>
+                    <li><a href="gpa.html">حاسبة المعدل</a></li>
+                    <li><a href="index.html">تسجيل الخروج</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="py-4">
+        <div class="container">
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h2>ريفان سلمان علي صلوي</h2>
+                        <p class="mb-1"><i class="fas fa-id-card me-2"></i> 1132070754</p>
+                        <p class="mb-1"><i class="fas fa-graduation-cap me-2"></i> كلية العلوم الصحية - تمريض</p>
+                    </div>
+                    <div class="col-md-4 text-md-end text-center">
+                        <div class="profile-img-placeholder d-inline-flex align-items-center justify-content-center bg-light rounded-circle" style="width: 120px; height: 120px;">
+                            <i class="fas fa-user fa-4x text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Profile Content -->
+            <div class="row">
+                <!-- Personal Information -->
+                <div class="col-md-6">
+                    <div class="card profile-section">
+                        <div class="card-body">
+                            <h3 class="card-title text-primary"><i class="fas fa-user me-2"></i> المعلومات الشخصية</h3>
+                            
+                            <form id="profileForm" action="#" method="post">
+                                <div class="form-group mb-3">
+                                    <label for="full_name" class="form-label">الاسم الكامل</label>
+                                    <input type="text" class="form-control" id="full_name" name="full_name" value="ريفان سلمان علي صلوي" disabled>
+                                </div>
+                                
+                                <div class="form-group mb-3">
+                                    <label for="national_id" class="form-label">رقم الهوية الوطنية</label>
+                                    <input type="text" class="form-control" id="national_id" name="national_id" value="1132070754" disabled>
+                                </div>
+                                
+                                <div class="form-group mb-3">
+                                    <label for="gender" class="form-label">الجنس</label>
+                                    <input type="text" class="form-control" id="gender" name="gender" value="أنثى" disabled>
+                                </div>
+                                
+                                <div class="form-group mb-3">
+                                    <label for="phone" class="form-label">رقم الجوال</label>
+                                    <input type="tel" class="form-control profile-editable" id="phone" name="phone" value="0557973887" disabled>
+                                </div>
+                                
+                                <div class="form-group mb-3">
+                                    <label for="email" class="form-label">البريد الإلكتروني</label>
+                                    <input type="email" class="form-control profile-editable" id="email" name="email" value="refansalman2005@gmail.com" disabled>
+                                </div>
+                                
+                                <div class="text-center profile-actions">
+                                    <button type="button" id="editProfileBtn" class="btn btn-primary">تعديل المعلومات</button>
+                                    <button type="submit" id="saveProfileBtn" class="btn btn-success" style="display: none;">حفظ التغييرات</button>
+                                    <button type="button" id="cancelEditBtn" class="btn btn-danger" style="display: none;">إلغاء</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Academic Information -->
+                <div class="col-md-6">
+                    <div class="card profile-section">
+                        <div class="card-body">
+                            <h3 class="card-title text-primary"><i class="fas fa-graduation-cap me-2"></i> المعلومات الأكاديمية</h3>
+                            
+                            <div class="profile-detail mb-3">
+                                <label class="form-label">الكلية الحالية</label>
+                                <input type="text" class="form-control" value="كلية العلوم" disabled>
+                            </div>
+                            
+                            <div class="profile-detail mb-3">
+                                <label class="form-label">التخصص الحالي</label>
+                                <input type="text" class="form-control" value="كيمياء" disabled>
+                            </div>
+                            
+                            <div class="profile-detail mb-3">
+                                <label class="form-label">المستوى الدراسي</label>
+                                <input type="text" class="form-control" value="الثاني" disabled>
+                            </div>
+                            
+                            <div class="profile-detail mb-3">
+                                <label class="form-label">المعدل التراكمي</label>
+                                <input type="text" class="form-control" value="4.63" disabled>
+                            </div>
+                            
+                            <div class="profile-detail mb-3">
+                                <label class="form-label">الساعات المجتازة</label>
+                                <input type="text" class="form-control" value="30" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Transfer Status -->
+                    <div class="card profile-section mt-4">
+                        <div class="card-body">
+                            <h3 class="card-title text-primary"><i class="fas fa-exchange-alt me-2"></i> حالة طلب التحويل</h3>
+                            
+                            <div class="alert alert-info">
+                                <h5>التخصص المطلوب: مسار صحي ، هندسة</h5>
+                                <p>تاريخ التقديم: 2023-10-15</p>
+                                <p>الحالة: <span class="badge bg-success">تمت الموافقة</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>البوابة الأكاديمية</h3>
+                    <p>بوابة النظام الأكاديمي الخاص بجامعة جازان توفر خدمات إلكترونية لطلاب الجامعة.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">الصفحة الرئيسية للجامعة</a></li>
+                        <li><a href="#">عمادة القبول والتسجيل</a></li>
+                        <li><a href="#">عمادة شؤون الطلاب</a></li>
+                        <li><a href="#">التقويم الأكاديمي</a></li>
+                        <li><a href="#">الخدمات الإلكترونية</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>تواصل معنا</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> جازان، المملكة العربية السعودية</p>
+                    <p><i class="fas fa-phone"></i> +966 17 3292222</p>
+                    <p><i class="fas fa-envelope"></i> info@jazanu.edu.sa</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 جميع الحقوق محفوظة لجامعة جازان</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

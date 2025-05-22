@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة المعدل - البوابة الأكاديمية</title>
+    
+    <!-- Bootstrap RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Tajawal for Arabic -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container">
+            <nav class="main-nav">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="شعار جامعة جازان">
+                    </a>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="home.html">الرئيسية</a></li>
+                    <li><a href="dashboard.html">لوحة التحكم</a></li>
+                    <li><a href="profile.html">الملف الشخصي</a></li>
+                    <li><a href="courses.html">السجل الأكاديمي</a></li>
+                    <li><a href="transfer.html">طلب تحويل</a></li>
+                    <li><a href="gpa.html" class="active">حاسبة المعدل</a></li>
+                    <li><a href="index.html">تسجيل الخروج</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card mb-4">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="mb-0"><i class="fas fa-calculator me-2"></i> حاسبة المعدل</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="alert alert-info">
+                                <h5>تعليمات استخدام الحاسبة:</h5>
+                                <ul>
+                                    <li>أدخل اسم المقرر (اختياري) وعدد الساعات المعتمدة والدرجة.</li>
+                                    <li>يمكنك إضافة المزيد من المقررات بالنقر على زر "إضافة مقرر".</li>
+                                    <li>انقر على حساب المعدل لمعرفة المعدل التراكمي.</li>
+                                    <li>يمكنك حذف أي مقرر بالنقر على أيقونة الحذف بجانبه.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h4 class="card-title">نظام التقديرات</h4>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>التقدير</th>
+                                                    <th>النقاط</th>
+                                                    <th>التقدير الرمزي</th>
+                                                    <th>الدرجة المئوية</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>ممتاز مرتفع</td>
+                                                    <td>5.00</td>
+                                                    <td>A+</td>
+                                                    <td>95 - 100</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ممتاز</td>
+                                                    <td>4.75</td>
+                                                    <td>A</td>
+                                                    <td>90 - أقل من 95</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>جيد جداً مرتفع</td>
+                                                    <td>4.50</td>
+                                                    <td>B+</td>
+                                                    <td>85 - أقل من 90</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>جيد جداً</td>
+                                                    <td>4.00</td>
+                                                    <td>B</td>
+                                                    <td>80 - أقل من 85</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>جيد مرتفع</td>
+                                                    <td>3.50</td>
+                                                    <td>C+</td>
+                                                    <td>75 - أقل من 80</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>جيد</td>
+                                                    <td>3.00</td>
+                                                    <td>C</td>
+                                                    <td>70 - أقل من 75</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>مقبول مرتفع</td>
+                                                    <td>2.50</td>
+                                                    <td>D+</td>
+                                                    <td>65 - أقل من 70</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>مقبول</td>
+                                                    <td>2.00</td>
+                                                    <td>D</td>
+                                                    <td>60 - أقل من 65</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>راسب</td>
+                                                    <td>1.00</td>
+                                                    <td>F</td>
+                                                    <td>أقل من 60</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <form id="gpaCalculatorForm">
+                                <div id="coursesContainer">
+                                    <!-- سيتم إضافة صفوف المقررات هنا عبر JavaScript -->
+                                </div>
+                                
+                                <div class="text-center mb-4">
+                                    <button type="button" id="addCourseBtn" class="btn btn-success add-course-btn">
+                                        <i class="fas fa-plus-circle me-2"></i> إضافة مقرر
+                                    </button>
+                                </div>
+                                
+                                <div class="d-grid gap-2">
+                                    <button type="submit" id="calculateGpaBtn" class="btn btn-primary btn-lg">
+                                        حساب المعدل
+                                    </button>
+                                </div>
+                            </form>
+                            
+                            <div id="gpaResult" class="mt-4">
+                                <!-- نتيجة حساب المعدل ستظهر هنا -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- GPA History -->
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="mb-0"><i class="fas fa-history me-2"></i> سجل المعدلات السابقة</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>الفصل الدراسي</th>
+                                            <th>العام الدراسي</th>
+                                            <th>المعدل الفصلي</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>الفصل الثاني</td>
+                                            <td>2022-2023</td>
+                                            <td>4.75</td>
+                                        </tr>
+                                        <tr>
+                                            <td>الفصل الأول</td>
+                                            <td>2022-2023</td>
+                                            <td>4.50</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div class="chart-container mt-4">
+                                <canvas id="academicPerformanceChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>البوابة الأكاديمية</h3>
+                    <p>بوابة النظام الأكاديمي الخاص بجامعة جازان توفر خدمات إلكترونية لطلاب الجامعة.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">الصفحة الرئيسية للجامعة</a></li>
+                        <li><a href="#">عمادة القبول والتسجيل</a></li>
+                        <li><a href="#">عمادة شؤون الطلاب</a></li>
+                        <li><a href="#">التقويم الأكاديمي</a></li>
+                        <li><a href="#">الخدمات الإلكترونية</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>تواصل معنا</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> جازان، المملكة العربية السعودية</p>
+                    <p><i class="fas fa-phone"></i> +966 17 3292222</p>
+                    <p><i class="fas fa-envelope"></i> info@jazanu.edu.sa</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 جميع الحقوق محفوظة لجامعة جازان</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/gpa.js"></script>
+</body>
+</html>

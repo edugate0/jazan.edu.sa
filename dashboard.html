@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - البوابة الأكاديمية</title>
+    
+    <!-- Bootstrap RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Tajawal for Arabic -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container">
+            <nav class="main-nav">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="شعار جامعة جازان">
+                    </a>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="home.html">الرئيسية</a></li>
+                    <li><a href="dashboard.html" class="active">لوحة التحكم</a></li>
+                    <li><a href="profile.html">الملف الشخصي</a></li>
+                    <li><a href="courses.html">السجل الأكاديمي</a></li>
+                    <li><a href="transfer.html">طلب تحويل</a></li>
+                    <li><a href="gpa.html">حاسبة المعدل</a></li>
+                    <li><a href="index.html">تسجيل الخروج</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="py-4">
+        <div class="container">
+            <!-- Welcome Section -->
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <div class="dashboard-welcome">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <h2 style="color: white;">مرحباً، ريفان سلمان علي صلوي</h2>
+                                <div class="accent-border">
+                                    <p class="lead">مرحباً بك في البوابة الأكاديمية لجامعة جازان</p>
+                                    <p>هنا يمكنك إدارة بياناتك الأكاديمية، ومتابعة سجلاتك، وتقديم طلبات التحويل.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-end">
+                                <div class="profile-img-placeholder d-inline-flex align-items-center justify-content-center bg-light rounded-circle" style="width: 120px; height: 120px; border: 4px solid var(--accent-color);">
+                                    <i class="fas fa-user fa-4x text-primary"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Stats Row -->
+            <div class="row dashboard-stats mb-4">
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <h3 style="color: var(--primary-color);">المعدل التراكمي</h3>
+                        <p style="color: var(--secondary-color);">4.63</p>
+                        <div class="small text-muted">من أصل 5.00</div>
+                        <i class="fas fa-chart-line fa-2x" style="position: absolute; top: 10px; left: 10px; opacity: 0.1; color: var(--primary-color);"></i>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <h3 style="color: var(--primary-color);">الساعات المجتازة</h3>
+                        <p style="color: var(--secondary-color);">30</p>
+                        <div class="small text-muted">من أصل 140 ساعة</div>
+                        <i class="fas fa-clock fa-2x" style="position: absolute; top: 10px; left: 10px; opacity: 0.1; color: var(--primary-color);"></i>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <h3 style="color: var(--primary-color);">المستوى الدراسي</h3>
+                        <p style="color: var(--secondary-color);">الثاني</p>
+                        <div class="small text-muted">السنة الأولى</div>
+                        <i class="fas fa-graduation-cap fa-2x" style="position: absolute; top: 10px; left: 10px; opacity: 0.1; color: var(--primary-color);"></i>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <h3 style="color: var(--primary-color);">الطلبات النشطة</h3>
+                        <p style="color: var(--secondary-color);">1</p>
+                        <div class="small text-muted">تمت الموافقة</div>
+                        <i class="fas fa-check-circle fa-2x" style="position: absolute; top: 10px; left: 10px; opacity: 0.1; color: var(--primary-color);"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- GPA Chart -->
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="mb-0"><i class="fas fa-chart-line me-2"></i> تطور المعدل التراكمي</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-container">
+                                <canvas id="academicPerformanceChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recent Activities and Transfer Requests -->
+            <div class="row">
+                <!-- Recent Activities -->
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="mb-0"><i class="fas fa-book me-2"></i> آخر المقررات</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr style="border-bottom: 2px solid var(--primary-color);">
+                                            <th>رمز المقرر</th>
+                                            <th>اسم المقرر</th>
+                                            <th>الدرجة</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>NURS201</strong></td>
+                                            <td>أساسيات التمريض</td>
+                                            <td><span class="badge bg-success"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>NURS202</strong></td>
+                                            <td>تشريح وفسيولوجيا</td>
+                                            <td><span class="badge bg-success"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>NURS203</strong></td>
+                                            <td>تمريض باطني وجراحي</td>
+                                            <td><span class="badge bg-success"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>BIOL210</strong></td>
+                                            <td>علم الأحياء الدقيقة</td>
+                                            <td><span class="badge bg-success"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>PHRM101</strong></td>
+                                            <td>أساسيات علم الأدوية</td>
+                                            <td><span class="badge bg-success"></span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="text-center mt-3">
+                                <a href="courses.html" class="btn btn-outline-primary">
+                                    <i class="fas fa-eye me-1"></i> عرض جميع المقررات
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Transfer Requests -->
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="mb-0"><i class="fas fa-exchange-alt me-2"></i> طلبات التحويل</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr style="border-bottom: 2px solid var(--primary-color);">
+                                            <th>التاريخ</th>
+                                            <th>التخصص المطلوب</th>
+                                            <th>الحالة</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2025-5-20</td>
+                                            <td><strong>تمريض  ،  </strong></td>
+                                            <td><span class="badge bg-success">تمت الموافقة</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="text-center mt-3">
+                                <a href="transfer.html" class="btn btn-outline-primary">
+                                    <i class="fas fa-tasks me-1"></i> إدارة طلبات التحويل
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quick Actions -->
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="mb-0"><i class="fas fa-bolt me-2"></i> إجراءات سريعة</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="row text-center">
+                                <div class="col-md-3 col-sm-6 mb-3">
+                                    <a href="profile.html" class="btn btn-outline-primary btn-lg w-100 py-3" style="border-radius: 15px; transition: all 0.3s ease;">
+                                        <i class="fas fa-user fa-2x mb-2"></i><br>
+                                        الملف الشخصي
+                                    </a>
+                                </div>
+                                <div class="col-md-3 col-sm-6 mb-3">
+                                    <a href="courses.html" class="btn btn-outline-primary btn-lg w-100 py-3" style="border-radius: 15px; transition: all 0.3s ease;">
+                                        <i class="fas fa-book fa-2x mb-2"></i><br>
+                                        السجل الأكاديمي
+                                    </a>
+                                </div>
+                                <div class="col-md-3 col-sm-6 mb-3">
+                                    <a href="transfer.html" class="btn btn-outline-primary btn-lg w-100 py-3" style="border-radius: 15px; transition: all 0.3s ease;">
+                                        <i class="fas fa-exchange-alt fa-2x mb-2"></i><br>
+                                        طلب تحويل
+                                    </a>
+                                </div>
+                                <div class="col-md-3 col-sm-6 mb-3">
+                                    <a href="gpa.html" class="btn btn-outline-primary btn-lg w-100 py-3" style="border-radius: 15px; transition: all 0.3s ease;">
+                                        <i class="fas fa-calculator fa-2x mb-2"></i><br>
+                                        حاسبة المعدل
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Academic Calendar -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="mb-0"><i class="fas fa-calendar-alt me-2"></i> التقويم الأكاديمي</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr style="border-bottom: 2px solid var(--primary-color);">
+                                            <th>الحدث</th>
+                                            <th>التاريخ</th>
+                                            <th>الحالة</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><i class="fas fa-calendar-check text-secondary me-2"></i> بداية الفصل الدراسي الثاني</td>
+                                            <td></td>
+                                            <td><span class="badge bg-secondary">انتهى</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-calendar-check text-secondary me-2"></i> فترة الحذف والإضافة</td>
+                                            <td> إلى </td>
+                                            <td><span class="badge bg-secondary">انتهى</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-calendar-check text-secondary me-2"></i> فترة الاعتذار عن الفصل الدراسي</td>
+                                            <td> إلى </td>
+                                            <td><span class="badge bg-secondary">انتهى</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-calendar-check text-secondary me-2"></i> الاختبارات النصفية</td>
+                                            <td> إلى</td>
+                                            <td><span class="badge bg-secondary">انتهى</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-calendar-check text-secondary me-2"></i> إجازة منتصف الفصل الدراسي</td>
+                                            <td> إلى </td>
+                                            <td><span class="badge bg-secondary">انتهى</span></td>
+                                        </tr>
+                                        <tr class="table-primary">
+                                            <td><i class="fas fa-calendar-day text-primary me-2"></i> <strong>الاختبارات النهائية</strong></td>
+                                            <td> إلى </td>
+                                            <td><span class="badge bg-primary">قادم</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>البوابة الأكاديمية</h3>
+                    <p>بوابة النظام الأكاديمي الخاص بجامعة جازان توفر خدمات إلكترونية لطلاب الجامعة.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">الصفحة الرئيسية للجامعة</a></li>
+                        <li><a href="#">عمادة القبول والتسجيل</a></li>
+                        <li><a href="#">عمادة شؤون الطلاب</a></li>
+                        <li><a href="#">التقويم الأكاديمي</a></li>
+                        <li><a href="#">الخدمات الإلكترونية</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>تواصل معنا</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> جازان، المملكة العربية السعودية</p>
+                    <p><i class="fas fa-phone"></i> +966 17 3292222</p>
+                    <p><i class="fas fa-envelope"></i> info@jazanu.edu.sa</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 جميع الحقوق محفوظة لجامعة جازان</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/chart.js"></script>
+</body>
+</html>
